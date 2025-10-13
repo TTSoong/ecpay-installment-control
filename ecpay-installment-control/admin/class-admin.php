@@ -489,6 +489,9 @@ class ECPay_Installment_Admin {
         update_option('ecpay_installment_control_options', $options);
         $this->options = $options;
         
+        // 標記已完成初始設定
+        update_option('ecpay_installment_control_first_run', false);
+        
         echo '<div class="notice notice-success is-dismissible"><p>' . __('設定已儲存。', 'ecpay-installment-control') . '</p></div>';
     }
     
